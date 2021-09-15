@@ -1,0 +1,30 @@
+1. sql query
+SELECT name, address, architecturalStyle, constructionStated, constructionCompleted
+FROM FamousVilla
+WHERE architecturalStyle <> 'funkcionalismus' AND architecturalStyle <> 'functionalismus'
+AND constructionCompleted - constructionStated > 1;
+
+2. sql query
+SELECT name, address FROM FamousVilla
+WHERE address LIKE '%Pisárky';
+
+3. sql query
+INSERT INTO FamousVilla VALUES
+(10, 'Adlerova Vila', 'Elsa a Bedřich Bassovi',
+'Zikmund Kerekes', 1932, 1932, 'functionalismus', 'Lipová 22, čp. 234, Brno 1-Pisárky'),
+(11, 'Blaschkova Vila', 'Ernst Gürtler',
+'Germano Wanderley', 1891, 1891, 'neorenesance', 'Smetanova 14, čp. 756, Brno 1-Veveří');
+
+4. sql query
+UPDATE FamousVilla
+SET architect = 'Norbert Schlesinger', constructionCompleted = 1935
+WHERE name = 'Löw-Beerova vila';
+
+5. sql query
+DELETE FROM FamousVilla WHERE architecturalStyle = 'purismus';
+DELETE FROM FamousVilla WHERE architecturalStyle = 'secese';
+
+6. sql query
+INSERT INTO FamousVilla (id, name, architect, constructionStated, architecturalStyle, address)
+VALUES (10, 'Rozestavěná', 'Richard Načrtl', 2021, 'moderna', 'Karlovská 624, Dolní Kounice');
+
